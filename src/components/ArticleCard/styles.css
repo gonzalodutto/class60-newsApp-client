@@ -1,0 +1,14 @@
+.ArticleCardComponent {
+    border: solid 2px black;
+    width: 300px;
+    padding: 10px;
+    margin: 50px;
+}
+
+.articleInformation {
+    margin: 10px;
+}
+
+.MoreInformationButton {
+    margin: 10px;
+}
