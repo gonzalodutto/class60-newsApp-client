@@ -21,7 +21,10 @@ const ArticleCard = (props) => {
         </div>
         <div>
           <button className="MoreInformationButton">
-            <NavLink className="product-title" to={`/articles/${props.id}`}>
+            <NavLink
+              className="product-title"
+              to={`/articles/by_id/${props.id}`}
+            >
               Read this article
             </NavLink>
           </button>
