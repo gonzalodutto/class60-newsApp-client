@@ -28,7 +28,14 @@ const SearchArticlePage = () => {
         <div>
           {articleList
             ? articleList.map((article, i) => (
-                <ArticleCard key={i} id={article.id} img={article.imageUrl} />
+                <ArticleCard
+                  key={i}
+                  id={article.id}
+                  author={article.author}
+                  img={article.imageUrl}
+                  title={article.title}
+                  categoryId={article.categoryId}
+                />
               ))
             : "loading..."}
         </div>

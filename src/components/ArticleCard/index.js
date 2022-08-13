@@ -7,14 +7,22 @@ const ArticleCard = (props) => {
       <div className="card-text-section">
         <div className="articleInformation">
           <img src={props.img} alt="imag" width="193px" />
-          <div>Name: {props.Name}</div>
-          <div>Id: {props.id}</div>
-          <div>Date: {props.dateOfBirth}</div>
+          <div>
+            {" "}
+            <h1>{props.title}</h1>
+          </div>
+          <div>By: {props.author}</div>
+          <div>
+            categoryId:{" "}
+            <NavLink to={`/articles/category/${props.categoryId}`}>
+              {props.categoryId}
+            </NavLink>
+          </div>
         </div>
         <div>
           <button className="MoreInformationButton">
-            <NavLink className="product-title" to={`/patients/${props.id}`}>
-              Show details
+            <NavLink className="product-title" to={`/articles/${props.id}`}>
+              Read this article
             </NavLink>
           </button>
         </div>
