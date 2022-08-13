@@ -18,8 +18,10 @@ function App() {
       </h1>
       <NavLink to="/articles">Search 🔍</NavLink>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/articles" element={<SearchArticlePage />} />
+        <Route path="/" element={<HomePage />} />;
+        <Route path="/articles" element={<SearchArticlePage />}>
+          <Route path="/articles/:filter" element={<HomePage />} />
+        </Route>
         <Route path="/articles/:id" element={<ArticleDetailPage />} />
         <Route path="/articles/category/:id" element={<CategoryPage />} />
       </Routes>
